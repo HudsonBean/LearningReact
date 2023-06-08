@@ -9,7 +9,122 @@
 
 .nav-bar {
     width: 100%;
-    height: 3.5rem;
-    background-color: rgba(255,255,255,0.15);
+    height: 4rem;
+    background-color: rgb(30,30,40);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+.nav-bar-home img {
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
+    margin-left: 2.5rem;
+    margin-top: 0.1rem;
+}
+.nav-bar-left, .nav-bar-right {
+    display: flex;
+    align-items: center;
+}
+.nav-bar-search {
+    width: 25rem;
+    height: 2em;
+    background-color: rgba(255,255,255,0.2);
+    margin-left: 1rem;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    pointer-events: all;
+    cursor: pointer;
+    border: 2.5px solid transparent;
+}
+.nav-bar-search img {
+    width: 15px;
+    height: 15px;
+    margin-left: 0.5rem;
+    filter: invert(0.85);
+    pointer-events: none;
+}
+.nav-bar-search span {
+    height: 15px;
+    margin-left: 1rem;
+    margin-bottom: 0.2rem;
+    font-weight: 750;
+    filter: invert(0.85);
+    pointer-events: none; 
+}
+.nav-bar-right a {
+    width: 8rem;
+    height: 2rem;
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    font-weight: 690;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2.5rem;
+}
+.nav-bar-right a:nth-child(1) {
+    background-color: rgba(86, 227, 255, 0.2);
+    border: 1px white solid;
+}
+
+.welcome-section {
+    width: 100%;
+    height: 45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.welcome-section-background { 
+    width: inherit;
+    height: inherit;
+    background-image: url(src/assets/4.jpeg);
+    filter: blur(10px); 
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.welcome-section-greeting {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.welcome-section-logo {
+    width: 250px;
+    height: 250px;
+    filter: invert(1);
+    margin-bottom: 6.9rem;
+}
+.welcome-section-text {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 690;
+    font-size: 3rem;
+}
+.welcome-section-greeting a {
+    background-color: rgba(86, 227, 255, 0.2);
+    border: 1px white solid;
+    width: 8rem;
+    height: 2rem;
+    text-decoration: none;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    font-weight: 690;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
