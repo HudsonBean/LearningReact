@@ -83,11 +83,14 @@ function App () {
       </div>
 
       <div className="origin-section" >
+        <div className="origin-section-background" ></div>
         <h1>How It Started</h1>
       </div>
 
       <div id="info-section" >
+        <div className="info-section-background" >
 
+        </div>
       </div>
     </>
   );
