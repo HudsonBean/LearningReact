@@ -70,6 +70,9 @@ function App () {
           <a href="" >Learn More</a>
         </div>
       </div>
+      <div>
+        
+      </div>
     </>
   );
 }
