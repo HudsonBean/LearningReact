@@ -7,33 +7,40 @@ import Typewriter from 'typewriter-effect/dist/core';
 // Global Variables
 let clickEffectDebounce = false;
 
-let typewriter = new Typewriter('.welcome-section-text', {
-  delay: 75,
-  loop: true,
-  strings: ['Dynamic', 'Efficient', "Back-End"],
-  autoStart: true,
-});
-
 // Main
 
 const sleep = (ms : number) => new Promise(r => setTimeout(r, ms));
 
-async function clickEffect (event : any) {
-  const object = event.target;
-  
-  if (!clickEffectDebounce) {
-    clickEffectDebounce = true;
-
-    object.style.border = "2.5px solid rgb(8, 146, 196)";
-    await sleep(100);
-    object.style.border = "2.5px solid transparent";
-
-    clickEffectDebounce = false;
-  }
-
+function typewriterEffect (element) {
+  const a = "." + element.props.className;
+  setTimeout(function(){
+    let typewriter = new Typewriter(a, {
+      delay: 75,
+      loop: true,
+      strings: ['Dynamic', 'Efficient', "Back-End"],
+      autoStart: true,
+    });
+  }, 1)
+  return (
+    element
+  );
 }
 
 function NavBar () {
+  async function clickEffect (event : any) {
+    const object = event.target;
+    
+    if (!clickEffectDebounce) {
+      clickEffectDebounce = true;
+  
+      object.style.border = "2.5px solid rgb(8, 146, 196)";
+      await sleep(100);
+      object.style.border = "2.5px solid transparent";
+  
+      clickEffectDebounce = false;
+    }
+  
+  }
   return (
     <div className="nav-bar" >
       
@@ -58,6 +65,7 @@ function NavBar () {
   );
 }
 
+
 function App () {
   return (
     <>
@@ -66,12 +74,15 @@ function App () {
         <div className="welcome-section-background" ></div>
         <div className="welcome-section-greeting" >
           <img className="welcome-section-logo" src="src/assets/cool.png" ></img>
-          <h1 className="welcome-section-text" ></h1>
-          <a href="" >Learn More</a>
+          {typewriterEffect(<h1 className="welcome-section-text" ></h1>)};
+          <div className="welcome-section-buttons" >
+            <a href="" >Learn More</a>
+            <a href="" >API Docs</a>
+          </div>
         </div>
       </div>
-      <div>
-
+      <div className="origin-section" >
+        <h1>How It Started</h1>
       </div>
     </>
   );
