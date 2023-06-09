@@ -76,13 +76,18 @@ function App () {
           <img className="welcome-section-logo" src="src/assets/cool.png" ></img>
           {typewriterEffect(<h1 className="welcome-section-text" ></h1>)};
           <div className="welcome-section-buttons" >
-            <a href="" >Learn More</a>
+            <a href="#info-section" >Learn More</a>
             <a href="" >API Docs</a>
           </div>
         </div>
       </div>
+
       <div className="origin-section" >
         <h1>How It Started</h1>
+      </div>
+
+      <div id="info-section" >
+
       </div>
     </>
   );
