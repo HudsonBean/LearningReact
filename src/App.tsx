@@ -65,10 +65,23 @@ function NavBar () {
   );
 }
 
+function VarifyAge() {
+  return (
+    <div className="blocker" >
+      <div className="age-verification-container">
+          <div className="age-verification" >
+              <h1>Verify Your Age</h1>
+          </div>
+        </div>
+      </div>
+  );
+}
+
 
 function App () {
   return (
     <>
+      <VarifyAge />
       <NavBar />
       <div className="welcome-section" >
         <div className="welcome-section-background" ></div>
