@@ -93,7 +93,7 @@ function App () {
 
       <div id="info-section" >
         <div className="info-section-background" >
-          <h1>You are: {} years old.</h1>
+          <h1></h1>
         </div>
       </div>
     </>
