@@ -4,8 +4,12 @@ import React from "react";
 
 import Typewriter from 'typewriter-effect/dist/core';
 
-// Global Variables
+import { useState } from 'react';
+
+// Global variable
+
 let clickEffectDebounce = false;
+let userAge = 0;
 
 // Main
 
@@ -65,23 +69,10 @@ function NavBar () {
   );
 }
 
-function VarifyAge() {
-  return (
-    <div className="blocker" >
-      <div className="age-verification-container">
-          <div className="age-verification" >
-              <h1>Verify Your Age</h1>
-          </div>
-        </div>
-      </div>
-  );
-}
-
 
 function App () {
   return (
     <>
-      <VarifyAge />
       <NavBar />
       <div className="welcome-section" >
         <div className="welcome-section-background" ></div>
@@ -102,7 +93,7 @@ function App () {
 
       <div id="info-section" >
         <div className="info-section-background" >
-
+          <h1>You are: {} years old.</h1>
         </div>
       </div>
     </>
